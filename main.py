@@ -13,8 +13,12 @@ driver.get("https://www.python.org/")
 
 #print(f"The price is {price_dollar.text}.{price_cents.text}")
 search_bar = driver.find_element(By.NAME, "q")
-print(search_bar.tag_name)
-print(search_bar.get_attribute("placeholder"))
-
-
+#print(search_bar.tag_name)
+#print(search_bar.get_attribute("placeholder"))
+button = driver.find_element(By.ID, "submit")
+#print(button.size)
+documentiaion_link = driver.find_element(By.CSS_SELECTOR, ".documentation-widget a")
+#print(documentiaion_link.text)
+bug_link = driver.find_element(By.XPATH,'//*[@id="content"]/div/section/div[1]/div[3]/p[2]/a')
+print(bug_link.text)
 driver.quit()
